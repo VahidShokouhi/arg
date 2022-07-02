@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-sample1
-  namespace: mojtaba-ahmadi
+  name: nginx-arg1
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-sample1
+      app: nginx-arg1
   template:
     metadata:
       labels:
-        app: nginx-sample1
+        app: nginx-arg1
     spec:
       containers:
-      - name: nginx-sample1
+      - name: nginx-arg1
         image: nginx
         imagePullPolicy: IfNotPresent
         ports:
